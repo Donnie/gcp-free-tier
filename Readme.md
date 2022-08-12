@@ -8,9 +8,8 @@
 Do `terraform apply`
 
 ## Logging in thru SSH
-1. Install jq if you have not already.
-2. Do `make get-ip` to get your instance's external IP Address
-3. Now `ssh sshuser@ip`
+1. Terraform would output the `external_ip` of the instance on successful apply.
+2. Now you may `ssh user@external_ip`
 
 ## What do you get?
 You get a free compute instance with 1vCPU, 1GB RAM and 30GB storage out of which is 2GB Swap space
