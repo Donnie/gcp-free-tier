@@ -23,7 +23,7 @@ resource "google_compute_instance" "default" {
   zone         = var.zone_free_south_carolina
 
   metadata = {
-    enable-oslogin = "TRUE"
+    ssh-keys   = "${var.sshuser}:${var.sshpub}"
   }
 
   boot_disk {

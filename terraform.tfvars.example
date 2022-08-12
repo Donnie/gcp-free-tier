@@ -1,2 +1,4 @@
 project_name = "free-kube"
 instance_name = "free-kube"
+sshuser = "you"
+sshpub = "ssh-rsa yourpubkey"

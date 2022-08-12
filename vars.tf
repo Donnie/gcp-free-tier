@@ -9,6 +9,16 @@ variable "instance_name" {
   description = "Instance Name"
 }
 
+variable "sshuser" {
+  type        = string
+  description = "Username for logging in through SSH"
+}
+
+variable "sshpub" {
+  type        = string
+  description = "Public key for logging in through SSH"
+}
+
 variable "credentials_file" {
   type        = string
   description = "JSON file from Service Account Key creation"
