@@ -23,7 +23,7 @@ resource "google_compute_instance" "default" {
   zone         = var.zone_free_south_carolina
 
   metadata = {
-    ssh-keys   = "${var.sshuser}:${var.sshpub}"
+    ssh-keys   = join("\n", [for acc in var.ssh_keys : "${acc.user}:${acc.key}"])
   }
 
   boot_disk {

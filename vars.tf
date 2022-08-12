@@ -1,4 +1,5 @@
 ##     Secrets                  ##
+
 variable "project_name" {
   type        = string
   description = "Project Name"
@@ -9,14 +10,12 @@ variable "instance_name" {
   description = "Instance Name"
 }
 
-variable "sshuser" {
-  type        = string
-  description = "Username for logging in through SSH"
-}
-
-variable "sshpub" {
-  type        = string
-  description = "Public key for logging in through SSH"
+variable "ssh_keys" {
+  type        = list(object({
+    key  = string
+    user = string
+  }))
+  description = "List of SSH accounts to be created on Instance"
 }
 
 variable "credentials_file" {
