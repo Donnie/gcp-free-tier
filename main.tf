@@ -35,8 +35,8 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  # Install Flask
-  metadata_startup_script = "sudo apt-get update"
+  # Install Swap Space
+  metadata_startup_script = file("swapfile.sh")
 
   network_interface {
     network = "default"
